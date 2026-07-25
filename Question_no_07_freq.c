@@ -27,6 +27,7 @@ int* frequecy(int n)
         temp_arr[digit]=count;
 
     }
+    free(arr);
     return temp_arr;
 }
 
@@ -39,8 +40,8 @@ int main()
     int* array=frequecy(num);
     for(int i=0;i<10;i++)
     {  
-        printf("%d digit is %d times repeat\n",i,array[i]);
+        printf("%d digit is %d times repeated\n",i,array[i]);
     }
     //printf("\n");
-
+    free(array);
 }
