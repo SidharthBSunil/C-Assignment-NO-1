@@ -8,7 +8,6 @@ int gcd(int a ,int b)
         return b;
     }
     return(gcd(b,rem));
-
 }
 void main()
 {
