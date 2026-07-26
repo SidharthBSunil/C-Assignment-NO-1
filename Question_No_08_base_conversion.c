@@ -39,6 +39,7 @@ int main()
         printf("%c\t",arr[i]);
     }
     printf("\n");
+    free(arr);
 
 
 }
