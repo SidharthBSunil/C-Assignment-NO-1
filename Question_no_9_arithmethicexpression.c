@@ -17,6 +17,12 @@ float mult(float num1,float num2)
 
 float div(float num1,float num2)
 {
+    if(num2==0)
+    {
+        printf("Undefined\n");
+        return 0;
+    }
+
     return num1/num2;
 }
 
