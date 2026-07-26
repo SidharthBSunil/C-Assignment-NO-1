@@ -1,45 +1,45 @@
 #include<stdio.h>
 
-int add(float num1,float num2)
+float add(float num1,float num2)
 {
     return num1+num2;
 }
 
-int sub(float num1,float num2)
+float sub(float num1,float num2)
 {
     return num1-num2;
 }
 
-int mult(float num1,float num2)
+float mult(float num1,float num2)
 {
     return num1*num2;
 }
 
-int add(float num1,float num2)
+float div(float num1,float num2)
 {
     return num1/num2;
 }
 
 
-int selector(float a,float b,int c)
+float selector(float a,float b,int c)
 {
     switch(c)
     {
         case 1:
-        add(a,b);
-        break;
+        return add(a,b);
+        
 
         case 2:
-        sub(a,b);
-        break;
+        return sub(a,b);
+        
 
         case 3:
-        mult(a,b);
-        break;
+        return mult(a,b);
+        
 
         case 4:
-        div(a,b);
-        break;
+        return div(a,b);
+        
 
 
     }
@@ -49,10 +49,11 @@ int main()
     float num1=0,num2=0;
     int exp=0;
     printf("enter two number");
-    scanf("%d%d",num1,num2);
+    scanf("%f%f",&num1,&num2);
     printf("enter 1 for +\n enter 2 for - \n enter 3 for *\n enter 4 for / \n");
     scanf("%d",&exp);
-    int result=selector(num1,num2,exp);
+    float result=selector(num1,num2,exp);
+    printf("final result is %f\n",result);
 
 
 }
