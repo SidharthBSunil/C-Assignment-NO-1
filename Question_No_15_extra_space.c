@@ -5,31 +5,31 @@ int main()
     char str[50];
     printf("enter the name");
     scanf("%[^\n]",str);
-    int n=strlen(str),space=0;
-    for(int i=0;i<=n;i++)
+    int n=strlen(str),i=0,j=0;
+    while(str[i]!='\0')
     {
-        if(str[i]==' ')
+        if(str[i]!=' ')
         {
-            space++;
+            str[j]=str[i];
+            
         }
-        if(space==2)
-        {
-
-            int j=i+1;
-            while(str[j]!=' ')
-            {
-                j++;
-            }
+        else
+        {   
             while(str[j]==' ')
             {
-                str[i]=str[j];
+                 
                 i++;
-                j++;
             }
-            space=0;
+            
+            
+
         }
-        
+        j++;
     }
+
+   
+        
+    
     printf("%s",str);
     
 
