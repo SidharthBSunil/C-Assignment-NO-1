@@ -72,6 +72,8 @@ int main()
     first|=b;
     second|=a;
 
+    printf("result is ..........\n");
+
     printf("first is %d\n",first);
     base_conversion(first,arr);
 
